@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="8.053" tests="2" skipped="0" failures="1" errors="0">
-<testcase classname="grid_feature" name="TC01_test_case_on_chrome" time="7.315">
+<testsuite name="Cucumber" time="6.038" tests="2" skipped="0" failures="1" errors="0">
+<testcase classname="grid_feature" name="TC01_test_case_on_chrome" time="5.392">
 <system-out><![CDATA[
 Given user is on the "https://www.github.com" url on "chrome" browser.......passed
 Then verify the page title contains "GitHub" on grid........................passed
 Then close the remote driver................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="grid_feature" name="TC02_test_case_on_firefox" time="0.476">
+<testcase classname="grid_feature" name="TC02_test_case_on_firefox" time="0.403">
 <failure type="org.openqa.selenium.SessionNotCreatedException" message="Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line 
 Host info: host: 'BEKIRS_ASUS', ip: '192.168.1.154'
 Build info: version: '4.10.0', revision: 'c14d967899'
