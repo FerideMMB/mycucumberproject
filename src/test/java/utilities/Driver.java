@@ -48,7 +48,7 @@ public class Driver {
                 driver = new SafariDriver();
             } else if ("chrome-headless".equals(browser)) {
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+               // driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
             }
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

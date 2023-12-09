@@ -4,7 +4,10 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.AbstractDriverOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -13,6 +16,10 @@ public class GridStepDefs {
     WebDriver driver;
     @Given("user is on the {string} url on {string} browser")
     public void user_is_on_the_url_on_browser(String url, String browser) throws MalformedURLException {
+        @SuppressWarnings("rawtypes")
+        AbstractDriverOptions options;
+        DesiredCapabilities desiredCapabilities;
+
 //        remote grid URL
         URL remoteURL = new URL("http://192.168.1.154:4444");
         if(browser.equalsIgnoreCase("chrome")) {
@@ -22,7 +29,7 @@ public class GridStepDefs {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         } else if (browser.equalsIgnoreCase("firefox")) {
 //            instantiating remote firefox driver
-            driver = new RemoteWebDriver(remoteURL, new FirefoxOptions());
+            driver = new RemoteWebDriver(new URL("http://192.168.1.154:4444"), new FirefoxOptions());
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }

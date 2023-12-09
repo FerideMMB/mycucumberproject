@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
         glue = "stepdefinitions",//PATH OF STEPDEFINITIONS FOLDER
         dryRun = false,//dryRun = true : RUNS AND GENERATES ONLY MISSING STEP DEFS. dryRun = false: RUN NORMAL. THIS IS DEFAULT VALUE
-        tags = "@grid"
+        tags = "@grid_firefox"
 )
 public class GridRunner {
 }
